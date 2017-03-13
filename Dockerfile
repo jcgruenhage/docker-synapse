@@ -40,8 +40,6 @@ RUN	export DEBIAN_FRONTEND=noninteractive \
 		build-essential \
 		python2.7-dev \
 		libffi-dev \
-                python-pip \
-                python-virtualenv \
                 libssl-dev\
                 libjpeg-dev \
                 libxslt1-dev \
