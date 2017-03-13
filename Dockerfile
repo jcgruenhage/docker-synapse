@@ -20,6 +20,7 @@ RUN	export DEBIAN_FRONTEND=noninteractive \
 		libsasl2-dev \
 		git \
 		bash \
+		gettext \
 	&& cd tmp \
 	&& git clone https://github.com/ncopa/su-exec \
 	&& cd su-exec \
