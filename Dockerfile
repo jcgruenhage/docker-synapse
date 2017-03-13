@@ -3,9 +3,9 @@ MAINTAINER 	Jan Christian Grünhage <me@jcg.re>
 
 RUN	export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get clean \
-	&& apt update \
-	&& apt upgrade -y \
-	&& apt install -y \
+	&& apt-get update \
+	&& apt-get upgrade -y \
+	&& apt-get install -y \
 		build-essential \
 		python2.7-dev \
 		libffi-dev \
@@ -36,7 +36,7 @@ RUN	export DEBIAN_FRONTEND=noninteractive \
 	&& pip install https://github.com/matrix-org/synapse/tarball/master \
 	&& pip install matrix-synapse-ldap3 \
 	&& mkdir /data \
-	&& apt remove -y \
+	&& apt-get autoremove -y \
 		build-essential \
 		python2.7-dev \
 		libffi-dev \
