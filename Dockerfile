@@ -36,8 +36,8 @@ RUN	export DEBIAN_FRONTEND=noninteractive \
 	&& pip install python-ldap \
 	&& pip install https://github.com/matrix-org/synapse/tarball/master \
 	&& pip install matrix-synapse-ldap3 \
-	&& mkdir /data \
-	&& apt-get autoremove -y \
+	&& mkdir /data \ 
+	&& echo 'Yes, do as I say!' | apt-get autoremove -y --force-yes \
 		build-essential \
 		python2.7-dev \
 		libffi-dev \
@@ -48,6 +48,15 @@ RUN	export DEBIAN_FRONTEND=noninteractive \
                 libldap2-dev \
                 libsasl2-dev \
                 git \
+		gnupg \
+		cpp \ 
+		g++ \
+		gcc \
+		gettext \
+		python3.4-minimal \
+		systemd \
+		adduser \
+		perl \
 	&& rm -rf /tmp \
 	&& rm -rf /var/lib/apt/* /var/cache/apt/* 
 	
